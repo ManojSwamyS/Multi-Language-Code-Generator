@@ -38,7 +38,7 @@ def generate_code_from_prompt_and_lang(prompt, language):
 
 # Streamlit UI
 st.title("💻 Multi-Language Code Generator ")
-st.write("Generate code in C, Java, or Python using Gemini AI. ✨")
+st.write("Generate code in C, C++, C#, Java, or Python using Gemini AI. ✨")
 
 prompt = st.text_input("Enter your code request (e.g., 'Write a function to reverse a string.')")
 language = st.selectbox("Select programming language", ["C", "C++", "C#", "Java", "Python"])
@@ -75,3 +75,4 @@ if 'generated_code' in st.session_state:
 if 'refined_code' in st.session_state:
     st.subheader(f"✨ Refined {st.session_state.language} Code:")
     st.code(st.session_state.refined_code, language=st.session_state.language.lower())
+
